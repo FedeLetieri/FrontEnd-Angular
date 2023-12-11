@@ -1,0 +1,24 @@
+@import url(assets/css/generic/input.css);
+
+.form__container-information {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+
+  #form__container-distance{ grid-column: 1/3; }
+
+  .form-container__input{
+    height: 4em;
+    width: 70%;
+    padding: 0 1.5em;
+  }
+
+  #input__distance {
+    width: 85%;
+  }
+
+  #label-distance{ left: 9%; }
+
+

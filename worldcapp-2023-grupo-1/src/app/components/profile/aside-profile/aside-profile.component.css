@@ -1,0 +1,119 @@
+@import url(assets/css/generic/button.css);
+@import url(assets/css/generic/animations.css);
+@import url(assets/css/generic/display.css);
+
+.custom-input-error,
+.custom-input {
+  border-radius: 0.6em;
+  border: 0.1em solid var(--color-primario-oscuro);
+  background-color: var(--color-secundario-oscuro);
+  color: var(--color-blanco);
+  width: 100%;
+  padding: 10px;
+  transition: border-color 0.3s ease-in-out;
+  margin-top: 0.5em;
+}
+
+.custom-input:focus {
+  border: solid 0.1em var(--color-primario);
+  outline: none;
+}
+
+.custom-input-error {
+  border: 0.1em solid var(--color-secundario);
+}
+
+.custom-input-error:focus {
+  border: solid 0.1em var(--color-secundario);
+  outline: none;
+}
+
+.summary-profile .center--flex {
+    flex-direction: column;
+  }
+  
+  .summary-profile {
+    padding: 1.5rem 5rem;
+  }
+  
+  .summary-profile__subcontainer {
+    border-bottom: 0.01rem solid var(--color-primario);
+    color: var(--color-blanco);
+  }
+  
+  .summary-profile__subcontent {
+    color: var(--color-secundario-oscuro);
+    font-size: 1.5rem;
+  }
+
+  .summary-profile__photo-perfil-modify img,
+  .summary-profile__photo-perfil img {
+    height: 13.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+  }
+
+  .edit-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px; 
+}
+
+  .summary-profile__photo-perfil-modify {
+    position: relative; 
+    display: inline-block; 
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  .summary-profile__buttons,
+  .summary-profile__subcontent span,
+  .summary-profile__usuario-modify,
+  .summary-profile__usuario {
+    margin-bottom: 1rem;
+  }
+  
+  .summary-profile__usuario {
+    display: inherit;
+    border-radius: 0.3rem;
+    padding: 0 0.3rem;
+    margin-top: 0.2rem;
+    align-items: end;
+    font-size: 2.4rem;
+    gap: 1rem;
+  }
+
+  .summary-profile__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .summary-profile__usuario-modify{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    padding: 0 0.3rem;
+    margin-top: 0.2rem;
+    align-items: end;
+    font-size: 2.4rem;
+  }
+
+  .form_error{
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: var(--color-secundario);
+  }
+
+  @media (max-width: 400px) {
+    .summary-profile {
+      align-self: center;
+    }
+  }
+  @media (min-width: 401px) and (max-width: 768px) {
+    .summary-profile__subcontainer {
+      border: none;
+    }
+  }

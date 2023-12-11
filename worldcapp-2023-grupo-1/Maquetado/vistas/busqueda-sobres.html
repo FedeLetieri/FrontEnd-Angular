@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldCApp</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo-blue.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/generic/principal.css" />
+    <link rel="stylesheet" href="../css/generic/styles.css" />
+    <link rel="stylesheet" href="../css/busqueda-sobres.css" />
+  </head>
+  <body>
+    <nav class="mainnav">
+      <a href="busqueda-figuritas.html" class="mainnav_logo center--flex">
+        <img
+          src="../img/logo.png"
+          alt="tres estrellas arriba de superficie triagular invertida"
+          class="worldcapp-logo"
+        />
+        <h1 class="logo__title">WorldCApp</h1>
+      </a>
+      <h1 class="mainnav_hamburger">
+        <a href="#" class="mainnav_link"><i class="fa-solid fa-bars"></i></a>
+      </h1>
+      <ul class="mainnav_links" tabindex="0">
+        <li>
+          <a href="busqueda-figuritas.html" class="mainnav_link"
+            >Figuritas</a
+          >
+        </li>
+        <li>
+          <a href="busqueda-sobres.html" class="mainnav_link-current">Sobres</a>
+        </li>
+        <li>
+          <a href="perfil-usuario.html" class="mainnav_link">Perfil</a>
+        </li>
+        <li>
+          <h1>
+            <a href="login.html" class="mainnav_link"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></a>
+          </h1>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="search-bar center--flex">
+      <form class="search-form" action="">
+        <input type="text" class="input-nav" placeholder="Buscar" />
+        <button type="submit" class="button-nav">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </section>
+
+    <main class="main-container center--flex">
+      <section class="search-order search-param cut-borders__container">
+        <div class="cut-borders__outer">
+          <div class="cut-borders__inner cyber-border">
+            <h3 class="search-param__header">Ordenar Por</h3>
+            <form action="" class="search-order__body">
+              <div class="search-order__card-info-item">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="radio" name="a" id="" checked />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label">Menor distancia</label>
+              </div>
+
+              <div class="search-order__card-info-item">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="radio" name="a" id="" />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label"
+                  >Más barato</label
+                >
+              </div>
+
+              <div class="search-order__card-info-item">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="radio" name="a" id="" />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label">
+                  Más sobres</label
+                >
+              </div>
+
+              <div class="search-order__card-info-item">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="radio" name="a" id="" />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label"
+                  >Solo los más cercanos</label
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-container__elements">
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Supermercado Chumbo</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-basket-shopping"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Librería Jorge</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Kiosco Lo Pibe!</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-store"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Supermercado Chumbo</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-basket-shopping"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Librería Jorge</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+
+        <article class="pack   hover-shadow">
+          <div class="pack__header center--flex">
+            <h3>Kiosco Lo Pibe!</h3>
+            <span class="pack__header-icon">
+              <i class="fa-solid fa-store"></i>
+            </span>
+          </div>
+
+          <div class="">
+            <p class="pack__body-content">
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Dirección<span class="twinkle">:</span></span
+                >
+                Avenida Siempre Viva, 5555, Springfield
+              </span>
+              <span class="pack__info-item">
+                <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+                <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+                  (-34.57955,-58.52652)
+                  <i class="location-icon fa-solid fa-location-dot"></i>
+                </a>
+              </span>
+              <span class="pack__info-item">
+                <span class="bold"
+                  >Distancia<span class="twinkle">:</span></span
+                >
+                3 kilómetros
+              </span>
+              <span
+                class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+              >
+                <span class="pack__subcard-info-item"
+                  ><span class="bold"
+                    >Stock de Sobres<span class="twinkle">:</span></span
+                  >
+                  45 unidades</span
+                >
+
+                <span class="pack__subcard-info-item"
+                  >Pedidos Pendientes</span
+                >
+              </span>
+              <span
+                class="pack__info-item pack__card-price bold center--flex"
+                >Precio por  <span class="pack__price">$240</span></span
+              >
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h1>
+        <i class="fa-brands fa-facebook footer_icon"></i>WorldCApp
+        <span class="footer_year">/ 2023</span>
+      </h1>
+    </footer>
+  </body>
+</html>

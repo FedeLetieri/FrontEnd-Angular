@@ -1,0 +1,9 @@
+app-login {
+  height: calc(100vh - 6em);
+  display: block;
+}
+
+.router-outlet {
+  height: 100%;
+  padding-bottom: 2.5rem;
+}

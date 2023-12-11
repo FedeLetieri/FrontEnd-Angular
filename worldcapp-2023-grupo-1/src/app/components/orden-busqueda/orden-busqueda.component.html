@@ -1,0 +1,55 @@
+<section class="search-order search-param cut-borders__container">
+  <div class="cut-borders__outer">
+    <div class="cut-borders__inner cyber-border">
+      <h3 class="search-param__header">Ordenar Por</h3>
+      <form action="" class="search-order__body">
+        <div class="search-order__card-info-item">
+          
+          <div class="checkbox center--flex">
+            <span class="checkbox__radio-btn">
+              <input type="radio" name="a" id="" checked data-testid="masCercano" (change)="cambiarCriterio('cercanos')"/>
+              <span class="checkbox__checkmark" ></span>
+            </span>
+          </div>
+          <label for="" class="checkbox__input-label">Menor distancia</label>
+        </div>
+
+        <div class="search-order__card-info-item">
+          <div class="checkbox center--flex">
+            <span class="checkbox__radio-btn">
+              <input type="radio" name="a" id="" data-testid="masBarato" (change)="cambiarCriterio('baratos')" />
+              <span class="checkbox__checkmark" ></span>
+            </span>
+          </div>
+          <label for="" class="checkbox__input-label"
+            >Más barato</label
+          >
+        </div>
+
+        <div class="search-order__card-info-item">
+          <div class="checkbox center--flex">
+            <span class="checkbox__radio-btn">
+              <input type="radio" name="a" id="" data-testid="masSobres" (change)="cambiarCriterio('cantidad')" />
+              <span class="checkbox__checkmark" ></span>
+            </span>
+          </div>
+          <label for="" class="checkbox__input-label">
+            Más sobres</label
+          >
+        </div>
+
+        <div class="search-order__card-info-item">
+          <div class="checkbox center--flex">
+            <span class="checkbox__radio-btn">
+              <input type="radio" name="a" id="" (change)="cambiarCriterio('masCercanos')"  />
+              <span class="checkbox__checkmark" ></span>
+            </span>
+          </div>
+          <label for="" class="checkbox__input-label"
+            >Solo los más cercanos</label
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

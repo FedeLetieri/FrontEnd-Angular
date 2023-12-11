@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldCApp</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo-blue.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/generic/principal.css" />
+    <link rel="stylesheet" href="../css/generic/styles.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body class="login__general">
+    <section class="center--flex section__main">
+      <form action="" class="cut-borders__container">
+        <div class="cut-borders__outer hover-shadow__container">
+          <div class="cut-borders__inner hover-shadow">
+            <h1 class="form__text--title center--flex"><img src="../img/logo-blue.png" alt="" class="worldcapp-logo__login"></h1>
+
+            <label for="usuario" class="form__input--subtitle">Usuario</label>
+
+            <div class="form__input--container">
+              <i class="form__input--icon center--flex fas fa-user"></i>
+              <input type="text" id="usuario" name="usuario" class="form__input--input" required/>
+            </div>
+
+            <label for="contraseña" class="form__input--subtitle">Contraseña</label>
+
+            <div class="form__input--container">
+              <i class="form__input--icon center--flex fas fa-key"></i>
+              <input type="password" id="contraseña" name="contraseña" class="form__input--input" required/>
+            </div>
+            
+            <button onclick="location.href='busqueda-figuritas.html'" type="submit" value="Ingresar" class="primary-button form__button--login "><a href="busqueda-figuritas.html"><span>Ingresar</span><i></i></a></button>
+        </div>
+      </div>
+      </form>
+    </section>
+    <footer class="footer">
+      <h1>
+        <i class="fa-brands fa-facebook footer_icon"></i>WorldCApp
+        <span class="footer_year">/ 2023</span>
+      </h1>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+.footer {
+  justify-content: center;
+  background: var(--gradiente);
+  padding: 1.5em;
+  display: flex;
+  height: 6em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.footer_icon {
+  margin-right: 0.5em;
+}
+
+.footer_year {
+  font-weight: 100;
+}

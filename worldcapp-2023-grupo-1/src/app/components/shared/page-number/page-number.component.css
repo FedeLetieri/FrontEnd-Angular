@@ -1,0 +1,13 @@
+.button--page{
+    background-color: var(--color-fondo-secundario);
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    aspect-ratio: 1/1;
+    padding: 0.5rem;
+    margin: 0.1rem;
+}
+
+.active-page{
+    background-color: var(--color-primario);
+    color: var(--color-fondo-secundario);
+}

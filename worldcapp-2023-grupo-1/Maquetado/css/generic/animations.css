@@ -1,0 +1,18 @@
+@keyframes floating {
+    0%{transform: translateY(-0.2rem);}
+    50%{transform: translateY(0.2rem);}
+    100%{transform: translateY(-0.2rem);}
+}
+
+@keyframes icon-rotation {
+    0%{transform: rotate(10deg);}
+    25%{transform: rotate(-20deg);}
+    50%{transform: rotate(15deg);}
+    75%{transform: rotate(-10deg);}
+    100%{transform: rotate(5deg);}
+}
+
+@keyframes twinkling-text {
+    0%{ opacity: 0; }
+    100%{ opacity: 1;}
+}

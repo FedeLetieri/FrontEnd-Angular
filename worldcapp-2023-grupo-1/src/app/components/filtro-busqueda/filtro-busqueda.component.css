@@ -1,0 +1,54 @@
+@import url(assets/css/generic/decorations.css);
+@import url(assets/css/parametros-busqueda.css);
+
+.search-filter .cut-borders__inner{
+    color: var(--color-primario);
+    flex-direction: column;
+}
+  
+.secondary-title{
+    font-size: 1.7rem;
+    margin: 1rem 0 0.6rem 0;
+}
+  
+.form-elements__container{
+    display: grid;
+    justify-content: end;
+    grid-template-areas:
+      "desde hasta"
+      "onfire promesa";
+    grid-template-columns: repeat(2,45%);
+    grid-auto-flow: dense;
+    padding: 1em;
+    align-items: center;
+    gap: 1em;
+}
+  
+.form__item,
+.form-item__checkbox{ display: flex; }
+  
+.form__input-label{ font-size: 1.3rem; }
+  
+.form__item{
+    flex-direction: column;
+    list-style: none;
+}
+  
+.input__item{
+    color: grey;
+    font-size: 1.4em;
+    padding: 0.9rem;
+    width: 85%;
+    border: 1px solid var(--color-primario);
+    border-radius: 0.4rem;
+    margin-bottom: 1.3rem;
+}
+  
+.from{ grid-area: desde; }
+  
+.to{ grid-area: hasta; }
+  
+.onfire{ grid-area: onfire; }
+  
+.promise{ grid-area: promesa; }
+  

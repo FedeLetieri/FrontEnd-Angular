@@ -1,0 +1,9 @@
+<div class="paginator center--flex">
+    <button data-testid="firstPage" *ngIf="!isFirstPage()" (click)="goTo(0)" class="paginator__button first-page button--arrow"><i class="fa-solid fa-angles-left"></i></button>
+    <button data-testid="pastPage" *ngIf="!isFirstPage()" (click)="goTo(currentPage - 1)" class="paginator__button previous-page button--arrow"><i class="fa-solid fa-angle-left"></i></button>
+    <span class="page-numbers">
+        <app-page-number (pageChangeEvent)="goTo($event)" [currentPageNumber]="currentPageNumber" *ngFor="let pagePreview of totalPagesPreview()" [page]="pagePreview"></app-page-number>
+    </span>
+    <button data-testid="nextPage" *ngIf="!isLastPage()" (click)="goTo(currentPage + 1)" class="paginator__button next-page button--arrow"><i class="fa-solid fa-angle-right"></i></button>
+    <button data-testid="lastPage" *ngIf="!isLastPage()" (click)="goTo(finalPage())" class="paginator__button last-page button--arrow"><i class="fa-solid fa-angles-right"></i></button>
+</div>

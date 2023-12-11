@@ -1,0 +1,22 @@
+<aside class="search-filter search-param cut-borders__container">
+    <div class="cut-borders__outer">
+      <div class="cut-borders__inner cyber-border center--flex">
+        <h3 class="titulo-principal search-param__header">Filtros</h3>
+        <h4 class="secondary-title">Valoración</h4>
+        <form #f="ngForm" action="" class="form-elements__container">
+          <label for="minValue" class="form__item from">
+            <span class="form__input-label">Desde</span>
+            <input #minValoracion min="0" data-testid="minValoracion"  name="minValoracion" [(ngModel)]="rango.min" (keyup.enter)="minValoracion.blur(); emitRange()" type="number" class="input__item" placeholder="" />
+          </label>
+          <label for="minValue" class="form__item to">
+            <span class="form__input-label">Hasta</span>
+            <input #maxValoracion min="0" data-testid="maxValoracion" name="maxValoracion" [(ngModel)]="rango.max" (keyup.enter)="maxValoracion.blur(); emitRange()" type="number" class="input__item" placeholder="" />
+          </label>
+          <div *ngFor="let label of labels ; let i = index" class="form-item__checkbox {{checkbox_classes[i]}}">
+            <app-checkbox [inputType]="'checkbox'" [inputName]="names[i]" (checkedEmitter)="identifyAndEmit($event.key, $event.value)"></app-checkbox>
+            <label for="" class="checkbox__input-label">{{label}}</label>
+          </div>
+        </form>
+      </div>
+    </div>
+</aside>

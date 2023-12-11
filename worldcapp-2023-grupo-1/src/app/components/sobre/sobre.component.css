@@ -1,0 +1,72 @@
+@import url(assets/css/generic/animations.css);
+
+.pack__header,
+.pack__body-subcontent{ justify-content: space-between; }
+
+.pack__header,
+.pack__card-price{ background-image: var(--gradiente); }
+
+.pack__card-price,
+.pack__header-icon{ color: var(--color-fondo-primario); }
+
+.pack__header,
+.pack__price{
+  color: #ffff;
+  text-shadow: 0.1rem 0.1rem var(--color-primario-oscuro);
+}
+
+.pack{
+  overflow: hidden;
+  max-width: 32rem;
+  border: 0.1rem solid var(--color-primario);
+  padding: 0.5rem;
+  cursor: pointer;
+  opacity: 0.8;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background-color: var(--color-fondo-primario);
+  display: flex;
+  flex-direction: column;
+}
+
+.pack,
+.pack__header,
+.pack__card-price{ border-radius: 1rem; }
+
+.pack__header{
+  flex-grow: 2;
+  font-size: 1.5rem;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.pack__header-icon{
+  font-size: 1.5em;
+  color: #FFFF;
+}
+
+.pack__header-icon:hover{ animation: icon-rotation 0.5s 1; }
+
+.pack__body-content{
+  font-size: 1.3rem;
+  color: var(--color-blanco);
+  display: flex;
+  flex-direction: column;
+}
+
+.pack__info-item{ padding: 1rem 0.5rem; }
+
+.pack__subcard-info-item:last-of-type{ margin-left: 1.5rem; }
+
+.pack__card-price{
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.pack__price{ margin-left: 0.8rem; }
+
+.location-icon{
+  font-size: 1.2rem;
+  color: var(--color-primario-oscuro);
+}

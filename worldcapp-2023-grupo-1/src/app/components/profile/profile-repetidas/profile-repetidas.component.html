@@ -1,0 +1,14 @@
+<section class="main-container center--flex">
+  <section class="main-container__cards center--flex">
+    <section class="main-container__elements">
+      <app-loading class="loading-wrapper" *ngIf="!figuritasExist(); else loaded"></app-loading>
+      <ng-template #loaded>
+        <app-figurita [hidden]="false" [repetida]="true" *ngFor="let figurita of pagedItems()" [figurita]="figurita"></app-figurita>
+      </ng-template>
+      <button class="plus-button__container" (click)="navegarAOtraVista()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </section>
+      <app-paginator [pageSize]="pageSize" [amountItems]="amountItems()" (indexesChangeEvent)="updatePage($event)"></app-paginator>
+    </section>
+</section>

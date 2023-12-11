@@ -1,0 +1,6 @@
+<div data-testid="checkbox" class="checkbox center--flex">
+    <span class="checkbox__radio-btn">
+      <input #inputCheckbox data-testid="checkbox__input" (change)="emitCheckedState(inputCheckbox.checked)" [name]="inputName" [type]="inputType" id=""/>
+      <span class="checkbox__checkmark"></span>
+    </span>
+</div>

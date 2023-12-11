@@ -1,0 +1,21 @@
+.paginator{ margin: 1rem 0;}
+
+.paginator > * { border-radius: 0.1rem; }
+
+.paginator__page-number{ padding: 0.5rem 0.7rem; }
+
+.paginator button{
+    cursor: pointer;
+    border: none;
+}
+
+.button--arrow{
+    padding: 0.2rem;
+    background-color: var(--color-primario);
+    font-size: 2rem;
+}
+
+.button--arrow { color: var(--color-fondo-secundario); }
+
+.last-page, .page-numbers{ margin-left: 0.4rem; }
+.first-page, .page-numbers{ margin-right: 0.4rem; }

@@ -1,0 +1,13 @@
+<div class="form__container-information">
+  <select
+    id={{id}}
+    class="form-container__input primary-input animation-input option_container"
+    name={{id}}
+    autocomplete="off"
+    required
+  >
+  <option *ngFor="let option of options">{{option}}</option>
+
+</select>
+  <label for={{id}} class="primary_label">{{title}}</label>
+</div>

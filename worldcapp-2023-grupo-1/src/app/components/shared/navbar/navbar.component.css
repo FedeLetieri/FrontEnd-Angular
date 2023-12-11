@@ -1,0 +1,147 @@
+.mainnav {
+  justify-content: space-between;
+  font-weight: bold;
+  position: sticky;
+  border-bottom: 1px solid var(--color-primario);
+  top: 0;
+  z-index: 10;
+  padding: 0 1.5em;
+  display: flex;
+  background-color: var(--color-fondo-secundario);
+  height: 6em;
+}
+
+.mainnav_logo {
+  padding: 1.5em 0;
+  /* DESPUÉS SACAR */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.worldcapp-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.logo__title {
+  margin-left: 0.5rem;
+  align-self: center;
+}
+
+.mainnav_links {
+  display: flex;
+  gap: 5rem;
+  height: 100%;
+}
+
+.mainnav_links li {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.mainnav_link,
+.mainnav_link i,
+.mainnav_link-current {
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.mainnav_link,
+.mainnav_link i {
+  display: block;
+  padding: 4px 0;
+  background: linear-gradient(
+      to bottom right,
+      var(--color-primario),
+      var(--color-primario-oscuro)
+    )
+    left / 0 no-repeat;
+  -webkit-text-stroke: 1px var(--color-primario);
+  color: transparent;
+}
+
+.mainnav_link::after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primario),
+    var(--color-primario-oscuro)
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.mainnav_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.mainnav_link-current {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    var(--color-primario),
+    var(--color-primario-oscuro)
+  );
+  padding: 0 1em;
+  color: var(--color-fondo-secundario);
+  clip-path: polygon(83% 0, 100% 38%, 100% 100%, 0 100%, 0 0);
+  letter-spacing: -1px;
+}
+
+.mainnav_hamburger {
+  display: none;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .mainnav {
+    position: relative;
+  }
+
+  .mainnav_hamburger {
+    display: block;
+  }
+
+  .mainnav_links {
+    display: none;
+    background-color: var(--color-primario-oscuro);
+    height: fit-content;
+    width: 100%;
+    padding: 1rem 3rem;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 6rem;
+    transition: 2s;
+    border-bottom: 0.1rem solid var(--color-primario);
+  }
+
+  .mainnav_links li {
+    margin: 1rem 0;
+  }
+
+  .mainnav_hamburger:focus-within ~ .mainnav_links,
+  .mainnav_links:hover {
+    display: block;
+    background-color: var(--color-fondo-primario);
+  }
+
+  .mainnav:focus-within {
+    margin-bottom: 19rem;
+  }
+}

@@ -1,0 +1,23 @@
+<nav class="mainnav">
+  <a routerLink="" class="mainnav_logo center--flex">
+    <img [src]="logoURL" alt="Logo" class="worldcapp-logo" />
+    <h1 class="logo__title">WorldCApp</h1>
+  </a>
+  <h1 class="mainnav_hamburger">
+    <a class="mainnav_link"><i class="fa-solid fa-bars"></i></a>
+  </h1>
+  <ul class="mainnav_links" tabindex="0">
+    <li *ngFor="let item of items">
+      <a routerLink="{{ item.value }}" [ngClass]="rootClass(item.value)"
+        >{{ item.label }}
+      </a>
+    </li>
+    <li>
+      <h1>
+        <a (click)="logout()" class="mainnav_link"
+          ><i class="fa-solid fa-arrow-right-from-bracket"></i
+        ></a>
+      </h1>
+    </li>
+  </ul>
+</nav>

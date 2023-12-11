@@ -1,0 +1,55 @@
+<aside class="summary-profile">
+  <form [formGroup]="asideForm">
+    <div class="summary-profile__subcontainer center--flex">
+        <picture class="summary-profile__photo-perfil" *ngIf="!isUserModifyingInformation()">
+          <img [src]='(data$ | async)?.imagen' alt="foto de perfil" />
+        </picture>
+
+        <picture class="summary-profile__photo-perfil-modify" *ngIf="isUserModifyingInformation()">
+          <div class="image-container">
+            <img [src]="imageUrl" alt="foto de perfil" />
+            <button class="icon-edit-container edit-button" (click)="fileInput.click()">
+              <i class="fa-solid fa-camera"></i>
+              <input type="file" accept="image/*" (change)="onFileSelected($event)" style="display: none" #fileInput>
+            </button>
+          </div>
+        </picture>
+
+
+        <div *ngIf="!isUserModifyingInformation()" class="summary-profile__usuario">
+          <h3 class="summary-profile__user-name">{{(data$ | async)?.username}}</h3>
+          <button class="icon-edit-container" (click)="modifyUserInformation()" data-testid="icon-edit">
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+        </div>
+
+        <div *ngIf="isUserModifyingInformation()" class="summary-profile__usuario-modify">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              formControlName="username"
+              autocomplete="off"
+              required
+              class="custom-input"
+              [ngClass]="{ 'custom-input-error': asideForm.get('username')?.invalid }"
+            />
+            <p class="form_error" *ngIf="asideForm.get('username')?.hasError('required')">* Username invalido</p>
+            <p class="form_error" *ngIf="asideForm.get('username')?.hasError('textoInvalido')">* Username no puede superar los 12 caracteres</p>
+        </div>
+    
+        <p class="summary-profile__subcontent center--flex">
+          <span><span class="bold">Edad:</span> {{ ((data$ | async)?.fechaDeNacimiento | calculateAge)}} años</span>
+          <span><span class="bold">Ubicación:</span> {{(data$ | async)?.localidad}}</span>
+        </p>
+        <div  *ngIf="isUserModifyingInformation() == true" class="summary-profile__buttons">
+          <button data-testid="cancel-button" class="icon-cancel-container" (click)="cancelModifications()">
+            <i class="fa-solid fa-times"></i>
+          </button>
+          <button data-testid="save-button" class="icon-edit-container" (click)="saveModifications()">
+            <i class="fa-solid fa-check"></i>
+          </button>
+        </div>
+    </div>
+  </form>
+</aside>

@@ -1,0 +1,81 @@
+<form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+  <label
+    for="usuario"
+    class="form__input--subtitle"
+    [ngClass]="{
+      'form__input--subtitle_error':
+        (loginForm.get('username')!.invalid &&
+          loginForm.get('username')!.touched)
+    }"
+    >Usuario</label
+  >
+
+  <div class="form__input--container">
+    <i
+      class="form__input--icon center--flex fas fa-user"
+      [ngClass]="{
+        'form__input--icon_error':
+          (loginForm.get('username')!.invalid &&
+            loginForm.get('username')!.touched)
+      }"
+    ></i>
+    <input
+      type="text"
+      id="usuario"
+      name="usuario"
+      class="form__input--input"
+      [ngClass]="{
+        'form__input--input_error':
+          (loginForm.get('username')!.invalid &&
+            loginForm.get('username')!.touched)
+      }"
+      formControlName="username"
+    />
+  </div>
+
+  <label
+    for="contraseña"
+    class="form__input--subtitle"
+    [ngClass]="{
+      'form__input--subtitle_error':
+        (loginForm.get('password')!.invalid &&
+          loginForm.get('password')!.touched)
+    }"
+    >Contraseña</label
+  >
+
+  <div class="form__input--container">
+    <i
+      class="form__input--icon center--flex fas fa-key"
+      [ngClass]="{
+        'form__input--icon_error':
+          (loginForm.get('password')!.invalid &&
+            loginForm.get('password')!.touched)
+      }"
+    ></i>
+    <input
+      type="password"
+      id="contraseña"
+      name="contraseña"
+      class="form__input--input"
+      [ngClass]="{
+        'form__input--input_error':
+          (loginForm.get('password')!.invalid &&
+            loginForm.get('password')!.touched)
+      }"
+      formControlName="password"
+    />
+  </div>
+
+  <button
+    type="submit"
+    value="Ingresar"
+    class="primary-button form__button--login"
+  >
+    <span>Ingresar</span><i></i>
+  </button>
+</form>
+
+<div id="alert">
+  <p></p>
+</div>

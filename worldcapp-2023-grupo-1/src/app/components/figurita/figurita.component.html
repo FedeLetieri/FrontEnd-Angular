@@ -1,0 +1,96 @@
+<article class="card cut-borders__container">
+  <button *ngIf="!hidden" class="icon-thrash-container center--flex" (click)="repetida ? eliminarFiguritaRepetida() : eliminarFiguritaFaltante()">
+    <i class="fa-regular fa-trash-can"></i>
+  </button>
+
+  <div class="cut-borders__outer hover-shadow__container" (click)="goToDetail(figurita.id)">
+    <div class="cut-borders__inner hover-shadow">
+      <div class="card_overview">
+        <div class="card_productinfo">
+          <div class="card_productinfo_text">
+            <h3 data-testid="numeroFigurita">
+              <i class="fa-solid fa-user"></i> {{ figurita.numero }}
+            </h3>
+          </div>
+          <div class="card_productinfo_text">
+            <h3 data-testid="estrellasFigurita">
+              <i class="fa-solid fa-star"></i> {{ figurita.estrellas }}
+            </h3>
+          </div>
+          <div class="card_productinfo_text">
+            <h3 data-testid="pesoFigurita">
+              <i class="fa-solid fa-weight-scale"></i> {{ figurita.peso }}KG
+            </h3>
+            <p data-testid="pesoFiguritaP">{{ figurita.peso }} kilos</p>
+          </div>
+          <div class="card_productinfo_text">
+            <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+            <p data-testid="alturaFigurita">{{ figurita.altura }} metros</p>
+          </div>
+        </div>
+        <img
+          [src]="figurita.imgJugador"
+          alt="Foto jugador"
+          class="card_productinfo_img"
+        />
+      </div>
+      <!-- overview info -->
+
+      <main class="card_info">
+        <h1 data-testid="nombreFigurita" class="card_info_title">
+          {{ figurita.nombre }}
+        </h1>
+
+        <ul class="card_info_texts">
+          <li
+            *ngFor="let mainItem of mainItems; let i = index"
+            class="card_info_item"
+          >
+            <img class="figure-ball" [src]="imgPelota" alt="Viñeta" />
+            <div class="card_info_text">
+              <p>
+                <strong>{{ mainItem[0] }}<span class="twinkle">:</span></strong>
+              </p>
+              <p [attr.data-testid]="testIds[i]"
+                *ngIf="!isSeleccion(mainItem[0]) && !isNacimiento(mainItem[0])"
+              >
+                {{ mainItem[1] }}
+              </p>
+              <p
+                *ngIf="isSeleccion(mainItem[0])"
+                class="flag"
+                [attr.data-testid]="testIds[i]"
+              >
+                <img [src]="figurita.imgBandera" alt="Bandera" />
+                {{ mainItem[1] }}
+              </p>
+              <p
+                *ngIf="isNacimiento(mainItem[0])"
+                [attr.data-testid]="testIds[i]"
+              >
+                {{ mainItem[1] | date: 'd/M/y' }}
+              </p>
+            </div>
+          </li>
+        </ul>
+        <p
+          *ngIf="figurita.duegno"
+          data-testid="duegnoFigurita"
+          class="card_info_cedida"
+        >
+          Cedida por {{ figurita.duegno }}
+        </p>
+        <div class="card_info_price cut-borders__container">
+          <div class="cut-borders__outer">
+            <div class="cut-borders__inner">
+              <div class="card_info_pricetag">
+                <span>U$D</span
+                >{{ figurita.precio | number: '1.0-2' : 'es-AR' }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</article>

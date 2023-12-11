@@ -1,0 +1,8 @@
+<section class="search-bar center--flex">
+  <form class="search-form" action="">
+    <input [(ngModel)]="busqueda" (ngModelChange)="emitBusqueda()" name="search-bar__input" data-testid="searchInput" type="text" class="input-nav" placeholder="Buscar" />
+    <button data-testid="searchButton" type="submit" class="button-nav">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+</section>

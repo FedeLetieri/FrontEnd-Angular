@@ -1,0 +1,120 @@
+<section class="center--flex section__main">
+  <app-loading
+    class="loading-wrapper"
+    *ngIf="loading(); else loaded"
+  ></app-loading>
+  <ng-template #loaded>
+    <div class="wrapper-details">
+      <section class="header__container--general">
+        <h1 class="header__text--title">{{ figurita.nombre }}</h1>
+        <p class="header__text--subtitle">de {{ figurita.duegno }}</p>
+        <div class="header__container--caracteristics">
+          <i *ngIf="figurita.onFire" class="on_fire_icon fas fa-fire"></i>
+          <i class="user_icon fa-solid fa-user"></i>
+          <h1>5</h1>
+        </div>
+      </section>
+
+      <section class="information__container--general">
+        <div class="information__container--image">
+          <img [src]="figurita.imgJugador" alt="Imagen figurita" />
+        </div>
+
+        <div class="information__container--data center--flex">
+          <div class="inner__container--data">
+            <div
+              class="information__subcontainer"
+              *ngFor="let item of mainItems"
+            >
+              <img class="figure-ball" [src]="imgPelota" alt="Viñeta" />
+              <div
+                class="information__p"
+                *ngIf="isSeleccion(item.label); else ifElseBlock"
+              >
+                <p class="flag">
+                  <img [src]="figurita.imgBandera" alt="Bandera" />
+                  {{ item.value }}
+                  <i class="information__icon fas fa-trophy"
+                    ><span class="info-icon__num">
+                      {{ figurita.copasMundiales }}</span
+                    ></i
+                  >
+                </p>
+              </div>
+              <ng-template #ifElseBlock>
+                <div
+                  class="information__p"
+                  *ngIf="isConf(item.label); else normalItem"
+                >
+                  <p class="information__p--key">
+                    {{ item.value }}
+                    <i class="information__icon fas fa-trophy">
+                      <span class="info-icon__num">
+                        {{ figurita.copasConf }}</span
+                      ></i
+                    >
+                  </p>
+                </div>
+              </ng-template>
+              <ng-template #normalItem>
+                <div class="information__p">
+                  <p class="information__p--key">{{ item.label }}</p>
+                  <p>
+                    {{ item.value }}&nbsp;
+                    <span *ngIf="tieneUnidad(item.label)">
+                      {{ unidad(item.label) }}</span
+                    >
+                  </p>
+                </div>
+              </ng-template>
+            </div>
+
+            <div class="information__subcontainer" *ngIf="figurita.lider">
+              <img class="figure-ball" [src]="imgPelota" alt="Viñeta" />
+              <div class="information__p">
+                <p class="information__p--key">Es líder</p>
+              </div>
+            </div>
+          </div>
+          <p class="information__p--price">
+            Cotizacion USD {{ figurita.precio | number: '1.0-2' : 'es-AR' }}
+          </p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="footer__container--data">
+        <div class="grid__container--data">
+          <div
+            class="information__subcontainer"
+            *ngFor="let item of footerItems"
+          >
+            <p class="information__p">
+              <span class="information__p--key">{{ item.label }}</span
+              >{{ item.value }}
+            </p>
+          </div>
+        </div>
+        <div class="grid__container--data">
+          <button
+            class="secondary-button"
+            type="submit"
+            value="Volver"
+            (click)="volverAtras()"
+          >
+            Volver
+          </button>
+          <button
+            class="primary-button"
+            type="submit"
+            value="Solicitar"
+            (click)="agregarFigurita()"
+          >
+            <span>Solicitar</span><i></i>
+          </button>
+        </div>
+      </section>
+    </div>
+  </ng-template>
+</section>

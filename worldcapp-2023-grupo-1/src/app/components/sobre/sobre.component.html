@@ -1,0 +1,53 @@
+<article class="pack hover-shadow">
+    <div class="pack__header center--flex">
+      <h3>{{sobre.nombre}}</h3>
+      <span class="pack__header-icon">
+        <i data-testid="iconoSobre" class="fa-solid {{iconoSobre}} " ></i>
+      </span>
+    </div>
+
+    <div class="">
+      <p class="pack__body-content">
+        <span class="pack__info-item">
+          <span class="bold"
+            >Dirección<span class="twinkle">:</span></span
+          >
+          {{sobre.direccion.calle | json}}
+          {{sobre.direccion.numero | json}}
+          {{sobre.direccion.localidad | json}}
+        </span>
+        <span class="pack__info-item">
+          <span class="bold">Ubicación geográfica<span class="twinkle">:</span></span>
+          <a href="https://www.google.com/maps/search/?api=1&query=-34.579553813431986%2C-58.5265226111497" target="_blank">
+            {{sobre.ubicacion.y}}
+            {{sobre.ubicacion.x}}
+            <i class="location-icon fa-solid fa-location-dot"></i>
+          </a>
+        </span>
+        <span class="pack__info-item">
+          <span class="bold"
+            >Distancia<span class="twinkle">:</span></span
+          >
+          {{sobre.distancia}} kilómetros
+        </span>
+        <span
+          class="pack__info-item pack__body-subcontent center--flex pack__body-content--bordeado"
+        >
+          <span class="pack__subcard-info-item"
+            ><span class="bold"
+              >Stock de Sobres<span class="twinkle">:</span></span
+            >
+            {{sobre.stock}} unidades</span
+          >
+
+          <span class="pack__subcard-info-item"
+            >Pedidos Pendientes</span
+          >
+        </span>
+        <span
+          class="pack__info-item pack__card-price bold center--flex"
+          >Precio por  <span class="pack__price">${{sobre.precio}}</span></span
+        >
+      </p>
+    </div>
+  </article>

@@ -1,0 +1,29 @@
+.main-container{
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.search-param{ margin-bottom: 1.5rem; }
+
+.main-container__elements{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 27rem);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px){
+  .main-container{
+    flex-direction: row;
+    align-items: start;
+    margin: 1rem;
+  }
+
+  .search-param{
+    margin: 0 1.5rem;
+    width: 40rem;
+    margin-top: 1rem;
+  }
+}

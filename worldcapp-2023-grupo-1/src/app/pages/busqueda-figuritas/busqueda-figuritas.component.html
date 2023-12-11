@@ -1,0 +1,14 @@
+<app-barra-busqueda (busquedaEmitter)="getFilter('search').contenido = $event; filterFiguritas()" ></app-barra-busqueda>
+
+<section class="main-container center--flex">
+    <app-filtro-busqueda (filterUpdateEvent)="filterFiguritas()" (rangeEmitter)="getFiltroRango().setRange($event)" (onFireCheckedEmitter)="getFilter('onFire').contenido = $event" (promiseCheckedEmitter)="getFilter('promesa').contenido = $event"></app-filtro-busqueda>
+    <section class="main-container__cards center--flex">
+        <app-loading [state]="loadingState" class="loading-wrapper" *ngIf="!figuritasExist(); else loaded"></app-loading>
+        <ng-template #loaded>
+            <section class="main-container__elements">
+                    <app-figurita [hidden]="true" *ngFor="let figurita of pagedItems()" [figurita]="figurita"></app-figurita>
+            </section>
+            <app-paginator [pageSize]="pageSize" [amountItems]="amountItems()" (indexesChangeEvent)="updatePage($event)"></app-paginator>
+        </ng-template>
+    </section>
+</section>

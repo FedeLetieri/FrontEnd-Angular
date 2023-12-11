@@ -1,0 +1,15 @@
+<app-barra-busqueda (busquedaEmitter)="criterio=$event; obtenerSobresFromService()"></app-barra-busqueda>
+<main class="main-container center--flex">
+    
+    <app-orden-busqueda (modificarCriterio)="tipoOrdenamiento=$event ;obtenerSobresFromService()"></app-orden-busqueda>
+    <section class="main-container__cards center--flex">
+        <app-loading class="loading-wrapper" *ngIf="!sobresExist(); else loaded"></app-loading>
+        <ng-template #loaded>
+            <section class="main-container__elements sobres">
+            <app-sobre *ngFor="let sobre of sobres" [sobre]="sobre" data-testid="sobre-busqueda">
+                <ng-container *ngIf="(usuario$ | async)?.esCercano(sobre.distancia)"></ng-container>
+            </app-sobre>
+            </section>
+        </ng-template>
+    </section>
+</main>

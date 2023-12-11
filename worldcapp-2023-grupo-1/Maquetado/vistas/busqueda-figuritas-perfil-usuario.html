@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorldCApp</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo-blue.ico">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/generic/principal.css" />
+    <link rel="stylesheet" href="../css/generic/styles.css" />
+    <link rel="stylesheet" href="../css/busqueda-figuritas.css" />
+  </head>
+  <body>
+    <!-- MAIN NAV -->
+    <nav class="mainnav">
+      <a href="busqueda-figuritas.html" class="mainnav_logo center--flex">
+        <img
+          src="../img/logo.png"
+          alt="tres estrellas arriba de superficie triagular invertida"
+          class="worldcapp-logo"
+        />
+        <h1 class="logo__title">WorldCApp</h1>
+      </a>
+      <h1 class="mainnav_hamburger">
+        <a href="#" class="mainnav_link"><i class="fa-solid fa-bars"></i></a>
+      </h1>
+      <ul class="mainnav_links" tabindex="0">
+        <li>
+          <a href="busqueda-figuritas.html" class="mainnav_link">Figuritas</a>
+        </li>
+        <li>
+          <a href="busqueda-sobres.html" class="mainnav_link">Sobres</a>
+        </li>
+        <li>
+          <a href="perfil-usuario.html" class="mainnav_link">Perfil</a>
+        </li>
+        <li>
+          <h1>
+            <a href="login.html" class="mainnav_link"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></a>
+          </h1>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- BUSCADOR -->
+    <section class="search-bar center--flex">
+      <form class="search-form" action="">
+        <input type="text" class="input-nav" placeholder="Buscar" />
+        <button type="submit" class="button-nav">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+    </section>
+
+    <!-- FILTRO BÚSQUEDA -->
+    <section class="main-container center--flex">
+      <aside class="search-filter search-param cut-borders__container">
+        <div class="cut-borders__outer">
+          <div class="cut-borders__inner cyber-border center--flex">
+            <h3 class="titulo-principal search-param__header">Filtros</h3>
+            <h4 class="secondary-title">Valoración</h4>
+            <form action="" class="form-elements__container">
+              <label for="minValue" class="form__item from">
+                <span class="form__input-label">Desde</span>
+                <input type="number" class="input__item" placeholder="" />
+              </label>
+              <label for="minValue" class="form__item to">
+                <span class="form__input-label">Hasta</span>
+                <input type="number" class="input__item" placeholder="" />
+              </label>
+              <div class="form-item__checkbox onfire">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="checkbox" name="a" id="" />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label">On Fire</label>
+              </div>
+              <div class="form-item__checkbox promise">
+                <div class="checkbox center--flex">
+                  <span class="checkbox__radio-btn">
+                    <input type="checkbox" name="a" id="" />
+                    <span class="checkbox__checkmark"></span>
+                  </span>
+                </div>
+                <label for="" class="checkbox__input-label">Promesa</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FIGURITA -->
+
+      <section class="main-container__elements">
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+
+        <article class="card cut-borders__container">
+          <a
+            href="detalles-figuritas.html"
+            class="cut-borders__outer hover-shadow__container"
+          >
+            <div class="cut-borders__inner hover-shadow">
+              <div class="card_overview">
+                <div class="card_productinfo">
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-user"></i> 5</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-star"></i> 124</h3>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-weight-scale"></i> 72KG</h3>
+                    <p>72 kilos</p>
+                  </div>
+                  <div class="card_productinfo_text">
+                    <h3><i class="fa-solid fa-arrows-up-down"></i> ALTURA</h3>
+                    <p>1.7 metros</p>
+                  </div>
+                </div>
+                <img
+                  src="../img/messi.png"
+                  alt="Foto jugador"
+                  class="card_productinfo_img"
+                />
+              </div>
+              <!-- overview info -->
+
+              <main class="card_info">
+                <h1 class="card_info_title">Lionel Messi</h1>
+
+                <ul class="card_info_texts">
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Casaca<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>10</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong
+                          >Nacimiento<span class="twinkle">:</span></strong
+                        >
+                      </p>
+                      <p>24/06/1987</p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Selección<span class="twinkle">:</span></strong>
+                      </p>
+                      <p class="flag">
+                        <img src="../img/bandera.png" alt="Bandera" /> ARG
+                      </p>
+                    </div>
+                  </li>
+                  <li class="card_info_item">
+                    <img
+                      class="figure-ball"
+                      src="../img/pelota.png"
+                      alt="Viñeta"
+                    />
+                    <div class="card_info_text">
+                      <p>
+                        <strong>Posición<span class="twinkle">:</span></strong>
+                      </p>
+                      <p>Delantero</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="card_info_price cut-borders__container">
+                  <div class="cut-borders__outer">
+                    <div class="cut-borders__inner">
+                      <div class="card_info_pricetag">
+                        <span>U$D</span>80.000.000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </a>
+        </article>
+      </section>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <h1>
+        <i class="fa-brands fa-facebook footer_icon"></i>WorldCApp
+        <span class="footer_year">/ 2023</span>
+      </h1>
+    </footer>
+  </body>
+</html>

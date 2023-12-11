@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo-blue.ico">s
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/generic/principal.css" />
+    <link rel="stylesheet" href="../css/generic/styles.css" />
+    <link rel="stylesheet" href="../css/perfil-usuario.css" />
+  </head>
+
+  <body>
+    <nav class="mainnav">
+      <a href="busqueda-figuritas.html" class="mainnav_logo center--flex">
+        <img
+          src="../img/logo.png"
+          alt="tres estrellas arriba de superficie triagular invertida"
+          class="worldcapp-logo"
+        />
+        <h1 class="logo__title">WorldCApp</h1>
+      </a>
+      <h1 class="mainnav_hamburger">
+        <a href="#" class="mainnav_link"><i class="fa-solid fa-bars"></i></a>
+      </h1>
+      <ul class="mainnav_links" tabindex="0">
+        <li>
+          <a href="busqueda-figuritas.html" class="mainnav_link">Figuritas</a>
+        </li>
+        <li>
+          <a href="busqueda-sobres.html" class="mainnav_link">Sobres</a>
+        </li>
+        <li>
+          <a href="perfil-usuario.html" class="mainnav_link-current">Perfil</a>
+        </li>
+        <li>
+          <h1>
+            <a href="login.html" class="mainnav_link"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></a>
+          </h1>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main_section">
+      <aside class="summary-profile center--flex">
+        <div class="summary-profile__subcontainer center--flex">
+          <picture class="summary-profile__photo-perfil">
+            <img src="../img/bilardo.jpeg" alt="foto de perfil" />
+          </picture>
+          <div class="summary-profile__usuario">
+            <h3 class="summary-profile__user-name">carlitos</h3>
+            <button class="icon-edit-container">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+          </div>
+
+          <p class="summary-profile__subcontent center--flex">
+            <span><span class="bold">Edad:</span> 84 Años</span>
+            <span><span class="bold">Ubicación:</span> CABA</span>
+          </p>
+        </div>
+      </aside>
+
+      <main class="main-profile">
+        <section class="nav__info-perfil-container">
+          <nav class="nav__info-perfil">
+            <ul class="nav__info-perfil-list flex">
+              <li class="nav__info-perfil__link nav__info-perfil__link--activo">
+                <a href="perfil-usuario.html" class="selected bold"
+                  >Información del perfil</a
+                >
+              </li>
+              <li class="nav__info-perfil__link">
+                <a href="perfil-usuario-figuritas-repetidas.html" class="bold"
+                  >Figuritas Repetidas</a
+                >
+              </li>
+
+              <li class="nav__info-perfil__link">
+                <a href="perfil-usuario-figuritas-faltantes.html" class="bold"
+                  >Figuritas Faltantes</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="main-profile__section-container center--flex">
+          <form class="section-container__form">
+            <article class="form-container">
+              <div class="form__title-container">
+                <h2 class="title-container__title-primary">
+                  Información General
+                </h2>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="text"
+                  class="form-container__input primary-input animation-input"
+                  id="name"
+                  name="name"
+                  autocomplete="off"
+                  placeholder=" "
+                  required
+                />
+                <label for="name" class="primary_label">Nombre:</label>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="text"
+                  class="form-container__input primary-input animation-input"
+                  id="last-name"
+                  autocomplete="off"
+                  placeholder=" "
+                  name="last-name"
+                  required
+                />
+                <label for="last-name" class="primary_label">Apellido:</label>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="date"
+                  class="form-container__input primary-input animation-input"
+                  id="birthdate"
+                  autocomplete="off"
+                  placeholder=" "
+                  name="birthdate"
+                  required
+                />
+                <label
+                  for="birthdate"
+                  class="primary_label primary_label-default"
+                  >Fecha de Nacimiento:</label
+                >
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="email"
+                  class="form-container__input primary-input animation-input"
+                  id="email"
+                  name="email"
+                  autocomplete="off"
+                  placeholder=" "
+                  required
+                />
+                <label for="email" class="primary_label"
+                  >Correo electrónico:</label
+                >
+              </div>
+            </article>
+
+            <article class="form-container">
+              <div class="form__title-container">
+                <h2 class="title-container__title-primary">Dirección</h2>
+              </div>
+
+              <div class="form__container-information">
+                <select
+                  id="province"
+                  class="form-container__input primary-input animation-input"
+                  name="province"
+                  autocomplete="off"
+                  required
+                ></select>
+                <label for="province" class="primary_label">Provincia:</label>
+              </div>
+
+              <div class="form__container-information">
+                <select
+                  id="zone"
+                  class="form-container__input primary-input animation-input"
+                  name="zone"
+                  autocomplete="off"
+                  required
+                ></select>
+                <label for="zone" class="primary_label">Localidad:</label>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="text"
+                  class="form-container__input primary-input animation-input"
+                  id="street"
+                  name="street"
+                  autocomplete="off"
+                  placeholder=" "
+                  required
+                />
+                <label for="street" class="primary_label">Calle:</label>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="number"
+                  class="form-container__input primary-input animation-input"
+                  id="height"
+                  
+                  name="height"
+                  autocomplete="off"
+                  placeholder=" "
+                  required
+                />
+                <label for="height" class="primary_label">Altura:</label>
+              </div>
+            </article>
+
+            <article class="form-container">
+              <div class="form__title-container">
+                <h2 class="title-container__title-primary">
+                  Ubicación Geográfica
+                </h2>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="number"
+                  class="form-container__input primary-input animation-input"
+                  id="positionX"
+                  autocomplete="off"
+                  placeholder=" "
+                  name="positionX"
+                  required
+                />
+                <label for="positionX" class="primary_label">Posicion X:</label>
+              </div>
+
+              <div class="form__container-information">
+                <input
+                  type="positionY"
+                  class="form-container__input primary-input animation-input"
+                  id="positionsY"
+                  autocomplete="off"
+                  placeholder=" "
+                  name="positionY"
+                  required
+                />
+                <label for="positionY" class="primary_label">Posicion Y:</label>
+              </div>
+
+              <div
+                class="form__container-information"
+                id="form__container-distance">
+                <input
+                  type="number"
+                  class="form-container__input primary-input animation-input"
+                  id="input__distance"
+                  autocomplete="off"
+                  placeholder=" "
+                  name="max distance"
+                  required
+                />
+                <label
+                  for="input__distance"
+                  id="label-distance"
+                  class="primary_label"
+                  >Distancia máxima de cercanía:</label
+                >
+              </div>
+            </article>
+
+            <article class="form-container" id="criterion-container">
+              <div class="form__title-container">
+                <h2 class="title-container__title-primary">
+                  Criterio para el cambio
+                </h2>
+              </div>
+
+              <div class="form__container-information" id="">
+                <select
+                  id="criterio-input"
+                  class="form-container__input primary-input animation-input"
+                  name=""
+                  autocomplete="off"
+                  required
+                ></select>
+                <label for="criterio" class="primary_label">Criterio:</label>
+              </div>
+            </article>
+
+            <article class="form__button-container center--flex">
+              <div class="button--spacing">
+                <button
+                  type="button"
+                  class="secondary-button"
+                  id="reset-button"
+                >
+                  Resetear
+                </button>
+              </div>
+
+              <div class="button--spacing">
+                <button
+                  type="submit"
+                  class="primary-button secondary-cancel-button"
+                  id="save-button"
+                >
+                  <span>Guardar</span><i></i>
+                </button>
+              </div>
+            </article>
+          </form>
+        </section>
+      </main>
+    </section>
+
+    <footer class="footer">
+      <h1>
+        <i class="fa-brands fa-facebook footer_icon"></i>WorldCApp
+        <span class="footer_year">/ 2023</span>
+      </h1>
+    </footer>
+  </body>
+</html>

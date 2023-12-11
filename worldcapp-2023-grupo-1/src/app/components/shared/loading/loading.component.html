@@ -1,0 +1,19 @@
+<div *ngIf="state; else noElements" class="loading">
+    <div class="loading__orbit center--flex orbit--l">
+        <span class="loading__star star-l"><i class="fa-solid fa-star"></i></span>
+        <span class="loading__star star-r"><i class="fa-solid fa-star"></i></span>
+    </div>
+    <div class="loading__orbit center--flex orbit--r">
+        <span class="loading__star star-l"><i class="fa-solid fa-star"></i></span>
+    </div>
+    <span class="loading__trophy"><i class="fa-solid fa-trophy"></i></span>
+</div>
+
+<ng-template #noElements>
+    <div class="no-elements center--flex">
+        <img class="no-elements__img" src="/assets/img/noElementsFound.png" alt="">
+        <p>{{msg}}</p>
+    </div>
+</ng-template>
+
+

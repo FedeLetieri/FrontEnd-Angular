@@ -1,0 +1,304 @@
+<section class="main-profile__section-container center--flex">
+  <form class="section-container__form" [formGroup]="userForm" (ngSubmit)="saveForm()">
+    <article class="form-container">
+      <div class="form__title-container">
+        <h2 class="title-container__title-primary">
+          Información General
+        </h2>
+      </div>
+
+        <div class="form__container-information">
+          <input
+            type="text"
+            class="form-container__input primary-input animation-input"
+            id="name"
+            name="name"
+            [ngClass]="{ 'primary-input-error': showErrorForField('nombre', 'required') }"
+            formControlName="nombre"
+            autocomplete="off"
+            required
+          />
+          <label for="name" class="primary_label">Nombre:</label>
+          <p class="form_error" *ngIf="showErrorForField('nombre', 'required')">* El campo es requerido</p>
+        </div>
+      
+      <div class="form__container-information">
+        <input
+          type="text"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('apellido', 'required') }"
+          id="last-name"
+          autocomplete="off"
+          name="last-name"
+          formControlName="apellido"
+          required
+        />
+        <label for="last-name" class="primary_label">Apellido:</label>
+        <p class="form_error" *ngIf="showErrorForField('apellido', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="date"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('fechaDeNacimiento', 'required') || showErrorForField('birthdate', 'fechaInvalida') }"
+          id="birthdate"
+          autocomplete="off"
+          name="birthdate"
+          formControlName="fechaDeNacimiento"
+          required
+        />
+        <label
+          for="birthdate"
+          class="primary_label primary_label-default"
+          >Fecha de Nacimiento:</label
+        >
+        <p class="form_error" *ngIf="showErrorForField('fechaDeNacimiento', 'required')">* El campo es requerido</p>
+        <p class="form_error" *ngIf="showErrorForField('fechaDeNacimiento','fechaInvalida')">* La fecha no es valida</p>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="email"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('email', 'required') }"
+          id="email"
+          name="email"
+          formControlName="email"
+          autocomplete="off"
+          required
+        />
+        <label for="email" class="primary_label"
+          >Correo electrónico:</label
+        >
+        <p class="form_error" *ngIf="showErrorForField('email', 'required')">* El campo es requerido</p>
+        <p class="form_error" *ngIf="showErrorForField('email', 'email')">* El email es inválido</p>
+      </div>
+    </article>
+
+    <article class="form-container">
+      <div class="form__title-container">
+        <h2 class="title-container__title-primary">Dirección</h2>
+      </div>
+
+      <div class="form__container-information">
+        <select
+          id="province"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('provincia', 'required') }"
+          name="province"
+          formControlName="provincia"
+          autocomplete="off"
+          required
+          (ngModelChange)="onProvinceChange($event)"
+        >
+          <option [value]="item" *ngFor="let item of provinciasArgentinas" class="option_container">{{ item }}</option>
+        </select>
+        <label for="province" class="primary_label">Provincia:</label>
+        <p class="form_error" *ngIf="showErrorForField('provincia', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information">
+        <select
+          id="zone"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('localidad', 'required') }"
+          name="zone"
+          formControlName="localidad"
+          autocomplete="off"
+          required
+        >
+        <option [value]="item" *ngFor="let item of localidadesArgentinas" class="option_container">{{ item }}</option>
+      </select>
+        <label for="zone" class="primary_label">Localidad:</label>
+        <p class="form_error" *ngIf="showErrorForField('localidad', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="text"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('calle', 'required') }"
+          id="street"
+          name="street"
+          formControlName="calle"
+          autocomplete="off"
+          required
+        />
+        <label for="street" class="primary_label">Calle:</label>
+        <p class="form_error" *ngIf="showErrorForField('calle', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="number"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('altura', 'required') }"
+          id="height"
+          name="height"
+          formControlName="altura"
+          autocomplete="off"
+          required
+        />
+        <label for="height" class="primary_label">Altura:</label>
+        <p class="form_error" *ngIf="showErrorForField('altura', 'required')">* El campo es requerido</p>
+        <p class="form_error" *ngIf="showErrorForField('altura','numeroInvalido')">* Debe ser mayor que 0</p>
+      </div>
+    </article>
+
+    <article class="form-container">
+      <div class="form__title-container">
+        <h2 class="title-container__title-primary">
+          Ubicación Geográfica
+        </h2>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="number"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('posicionX', 'required') }"
+          id="positionX"
+          autocomplete="off"
+          name="positionX"
+          formControlName="posicionX"
+          required
+        />
+        <label for="positionX" class="primary_label">Posicion X:</label>
+        <p class="form_error" *ngIf="showErrorForField('posicionX', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information">
+        <input
+          type="number"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('posicionY', 'required') }"
+          id="positionsY"
+          autocomplete="off"
+          name="positionY"
+          formControlName="posicionY"
+          required
+        />
+        <label for="positionsY" class="primary_label">Posicion Y:</label>
+        <p class="form_error" *ngIf="showErrorForField('posicionY', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div
+        class="form__container-information"
+        id="form__container-distance">
+        <input
+          type="number"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('distanciaDeCercania', 'required') }"
+          id="input__distance"
+          autocomplete="off"
+          name="max distance"
+          formControlName="distanciaDeCercania"
+          required
+        />
+        <label
+          for="input__distance"
+          id="label-distance"
+          class="primary_label"
+          >Distancia máxima de cercanía:</label
+        >
+        <p id="input__distance" class="form_error" *ngIf="showErrorForField('distanciaDeCercania', 'required')">* El campo es requerido</p>
+        <p id="input__distance" class="form_error" *ngIf="showErrorForField('distanciaDeCercania', 'numeroInvalido')">* Debe ser mayor que 0</p>
+      </div>
+    </article>
+
+    <article class="form-container" id="criterion-container">
+      <div class="form__title-container">
+        <h2 class="title-container__title-primary">
+          Criterio para el cambio
+        </h2>
+      </div>
+
+      <div class="form__container-information" id="">
+        <select
+          id="criterio-input"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('criterio', 'required') }"
+          name="criterio-input"
+          formControlName="criterio"
+          autocomplete="off"
+          required
+        >
+        <option [value]="item" *ngFor="let item of criterios" class="option_container">{{ item }}</option>
+      </select>
+        <label for="criterio-input" class="primary_label">Criterio:</label>
+        <p class="form_error" *ngIf="showErrorForField('criterio', 'required')">* El campo es requerido</p>
+      </div>
+
+      <div class="form__container-information" *ngIf="userForm.get('criterio')?.value === 'Nacionalista'">
+        <!-- Input para Nacionalista -->
+        <select
+          id="inputNacionalista"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('inputNacionalista', 'required') }"
+          name="inputNacionalista"
+          formControlName="inputNacionalista"
+          autocomplete="off"
+          required
+          (change)="addSelectedOption($event)"
+        >
+          <option [value]="item.pais" *ngFor="let item of nacionalistaOptions" class="option_container">{{ item.pais }}</option>
+        </select>
+        <label for="inputNacionalista" class="primary_label">Campo para Nacionalista:</label>
+        <p class="form_error" *ngIf="showErrorForField('inputNacionalista', 'required')">* El campo es requerido</p>
+        
+        <div *ngIf="selectedOptions.length > 0" class="selected-options">
+          <div *ngFor="let option of selectedOptions" class="primary-input selected-option">
+            {{ option.pais }}
+            <span (click)="removeSelectedOption(option)" class="remove-option">X</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="form__container-information" *ngIf="userForm.get('criterio')?.value === 'Fanatico'">
+        <!-- Input para Fanático -->
+        <select
+          id="inputFanatico"
+          class="form-container__input primary-input animation-input"
+          [ngClass]="{ 'primary-input-error': showErrorForField('inputFanatico', 'required') }"
+          name="inputFanatico"
+          formControlName="inputFanatico"
+          autocomplete="off"
+          required
+        >
+        <option [value]="item.nombre + ' ' + item.apellido" *ngFor="let item of fanaticoOptions" class="option_container">{{item.nombre}} {{item.apellido}}</option>
+      </select>
+        <label for="inputFanatico" class="primary_label">Campo para Fanático:</label>
+        <p class="form_error" *ngIf="showErrorForField('inputFanatico', 'required')">* El campo es requerido</p>
+      </div>
+
+
+    </article>
+
+    <article class="form__button-container center--flex">
+      <div class="button--spacing">
+        <button
+          type="button"
+          class="secondary-button"
+          id="reset-button"
+          data-testid="reset-button"
+          (click)="onResetForm()"
+        >
+          Resetear
+        </button>
+      </div>
+
+      <div class="button--spacing">
+        <button
+          type="submit"
+          class="primary-button secondary-cancel-button"
+          id="save-button"
+          data-testid="save-button"
+        >
+          <span>Guardar</span><i></i>
+        </button>
+      </div>
+    </article>
+  </form>
+  <div class="success-message" *ngIf="isSavedSuccessfully">Guardado exitosamente</div>
+</section>
