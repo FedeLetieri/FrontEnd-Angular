@@ -1,4 +1,3 @@
-![Coverage](./badges/worldcapp-2023-grupo-1/coverage.svg)
 # TP WorldCApp - Grupo 1
 
 ### Integrantes
